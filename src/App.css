@@ -5,14 +5,51 @@
   gap: 11px;
   height: 108px;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+  background-color: #FFF;
 }
 
-.header .header-icon {
+.header-icon {
   width: 43px;
   height: 52px;
 }
 
-.header .header-title {
-  font-size: 2rem;
+.header-title {
   font-weight: 400;
 }
+
+.main-content {
+  padding: 70px 10px 10px;
+}
+
+.add-ingrediant-form {
+  display: flex;
+  justify-self: center;
+  gap: 12px;
+}
+
+.add-ingrediant-form input {
+  border-radius: 6px;
+  border: 1px solid #D1D5DB;
+  padding: 9px 13px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  flex-grow: 1;
+  min-width: 100px;
+  max-width: 400px;
+}
+
+.add-ingrediant-form button {
+  font-family: 'Inter', sans-serif;
+  border-radius: 6px;
+  border: none;
+  background-color: #141413;
+  color: #FAFAF8;
+  font-size: 0.875rem;
+}
+
+.add-ingrediant-form button::before {
+  content: "+";
+  margin-right: 0.3rem;
+}
+
+
+
