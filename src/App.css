@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+  height: 108px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+}
+
+.header .header-icon {
+  width: 43px;
+  height: 52px;
+}
+
+.header .header-title {
+  font-size: 2rem;
+  font-weight: 400;
+}
