@@ -1,4 +1,5 @@
 import './App.css'
+import './index.css'
 import Header from './Header'
 import MainContent from './MainContent'
 
