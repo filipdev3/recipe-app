@@ -102,5 +102,10 @@ ul.ingredients-list > li {
   cursor: pointer;
 }
 
+section {
+  width: 100%;
+}
+
+
 
 
