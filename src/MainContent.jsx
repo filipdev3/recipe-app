@@ -10,7 +10,7 @@ export default function MainContent() {
 
     const addIngredient = (formData) => {
         const newIngredient = formData.get("ingredient")
-        setIngredients(prevIngredients => [...prevIngredients, newIngredient])
+        setIngredients(prevIngredients => newIngredient !== '' ? [...prevIngredients, newIngredient] : prevIngredients)
     }
 
     const [recipe, setRecipe] = useState()
