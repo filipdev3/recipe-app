@@ -1,25 +1,25 @@
 import { useState } from "react"
-import Recipe from "./Recipe"
-import IngredientsList from "./IngredientsList"
+import Recipe from "./components/Recipe"
+import IngredientsList from "./components/IngredientsList"
+import { getRecipeFromMistral } from './ai'
 
 export default function MainContent() {
 
     const [ingredients, setIngredients] = useState([])
 
-    const ingredientsList = ingredients.map(ingredient => (
-         <li key={ingredient}>{ingredient}</li>
-    ))
 
     const addIngredient = (formData) => {
         const newIngredient = formData.get("ingredient")
         setIngredients(prevIngredients => [...prevIngredients, newIngredient])
     }
 
-    const [recipeShown, setRecipeShown] = useState(false)
+    const [recipe, setRecipe] = useState()
 
-    const getARecipe = () => {
-        setRecipeShown(prevRecipe => !prevRecipe)
+    async function getRecipe(){
+        const recipeMarkdown = await getRecipeFromMistral(ingredients)
+        setRecipe(recipeMarkdown)
     }
+
 
     return (
         <main className="main-content">
@@ -39,8 +39,7 @@ export default function MainContent() {
             {ingredients.length > 0 ? 
                 <IngredientsList 
                     ingredients={ingredients}
-                    ingredientsList={ingredientsList}
-                    getARecipe={getARecipe}
+                    getRecipe={getRecipe}
                 /> 
             :   
                 <div> 
@@ -52,7 +51,7 @@ export default function MainContent() {
 
             {/*placeholder for recipe from chef api*/}
 
-            { recipeShown ? <Recipe /> : null }
+            { recipe ? <Recipe recipe={recipe}/> : null }
 
         </main>
     )
