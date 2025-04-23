@@ -1,18 +1,17 @@
-import { useState } from 'react'
-import { getRecipeFromMistral } from '../ai'
-
 export default function IngredientsList(props){
 
+    {/*mapping over ingredients array which is received trough props to create <li> DOM elements*/}
     const ingredientsList = props.ingredients.map(ingredient => (
         <li key={ingredient}>{ingredient}</li>
    ))
 
-   
 
     return(
         <section>
             <h2>Ingredients on hand:</h2>
             <ul className="ingredients-list" aria-live="polite">{ingredientsList}</ul>
+
+            {/*if number of ingredients are at least 4 display get-recipe-container, if isn't display how many ingredients user should enter to "unlock" button for generating recipe*/}
                 {props.ingredients.length > 3 ? 
                     <div className="get-recipe-container">
                         <div>
