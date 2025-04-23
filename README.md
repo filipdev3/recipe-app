@@ -44,24 +44,24 @@ Chef Mistral is a modern React web app that helps you cook up meals using only t
 
 **Starting page** <br/>
 This is how application looks like when user runs it. <br/>
-![Screenshot](assets/screenshots/starting-page.png)
+![Screenshot](src/assets/screenshots/starting-page.png)
 
 
 **Adding ingredients** <br/>
 User can simply add ingredients by entering name of the ingredient and clicking "+Add ingredients" button or hitting enter on keyboard. <br/>
-![Screenshot](assets/screenshots/adding-ingredients.png)
+![Screenshot](src/assets/screenshots/adding-ingredients.png)
 
 
 **Ingredients on hand** <br/>
 User needs to enter at least 4 ingredients to unlock "Get a recipe" button, otherwise application will display how many more ingredients the user needs to enter to be able to generate the recipe. <br/>
-![Screenshot](assets/screenshots/ingredients-on-hand.png)
+![Screenshot](src/assets/screenshots/ingredients-on-hand.png)
 
 
 **Ready for recipe** <br/>
 Once user enters sufficient amount of ingredients, he will be able to generate the recipe i.e. "Get a recipe" button will be unlocked. <br/>
-![Screenshot](assets/screenshots/ready-for-recipe.png)
+![Screenshot](src/assets/screenshots/ready-for-recipe.png)
 
 
 **Recipe generated** <br/>
 When user clicks "Get a recipe" button the app will contact the AI ​​Mistral model via the API and generate a recipe based on the given ingredients. <br/>
-![Screenshot](assets/screenshots/recipe-generated.png)
+![Screenshot](src/assets/screenshots/recipe-generated.png)
