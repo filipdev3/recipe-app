@@ -14,7 +14,7 @@ export default function IngredientsList(props){
             {/*if number of ingredients are at least 4 display get-recipe-container, if isn't display how many ingredients user should enter to "unlock" button for generating recipe*/}
                 {props.ingredients.length > 3 ? 
                     <div className="get-recipe-container">
-                        <div>
+                        <div ref = {props.ref}>
                             <h3>Ready for recipe?</h3>
                             <p>Generate a recipe from your list of ingredients.</p>
                         </div>
